@@ -1,0 +1,16 @@
+# Python and Django generated files
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Local environment and runtime files
+venv/
+.venv/
+Frontend/media/
+staticfiles/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

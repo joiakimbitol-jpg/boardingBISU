@@ -1,0 +1,135 @@
+body{
+    background:#f8fafc;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand{
+    font-size:1.6rem;
+}
+
+.nav-link{
+    font-weight:500;
+}
+
+footer{
+    margin-top:100px;
+}
+.hero{
+    background:#f8fafc;
+}
+
+.hero h1{
+    color:#1f2937;
+    font-weight:700;
+}
+
+.hero p{
+    color:#6b7280;
+}
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+.hero-section{
+    padding:100px 0;
+    background:#f8fafc;
+}
+
+.hero-section h1{
+    font-weight:800;
+}
+
+.hero-section img{
+    max-height:500px;
+    object-fit:cover;
+}
+
+.search-section{
+    margin-top:-40px;
+    position:relative;
+    z-index:10;
+}
+
+section{
+    padding:80px 0;
+}
+.card{
+    transition:0.3s ease;
+    border-radius:15px;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.btn{
+    border-radius:10px;
+}
+
+section{
+    padding:80px 0;
+}
+.card{
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.card img{
+    height:240px;
+    object-fit:cover;
+}
+
+.badge{
+    font-size:.8rem;
+}
+
+.page-link{
+    border-radius:10px;
+    margin:0 4px;
+}
+.card{
+    border-radius:18px;
+}
+
+img{
+    border-radius:15px;
+}
+
+.btn{
+    border-radius:12px;
+}
+
+section{
+    padding:80px 0;
+}
+/*regester form*/
+.form-control{
+    height:50px;
+    border-radius:12px;
+}
+
+.btn-primary{
+    height:50px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.card{
+    border-radius:20px;
+}
+
+.card:hover{
+    transform:none;
+}
