@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'boardingfinder_db',
         'USER': 'root',
-        'PASSWORD': '12345!@#$%',
+        'PASSWORD': 'joiakim2007',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
