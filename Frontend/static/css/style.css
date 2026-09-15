@@ -133,3 +133,9 @@ section{
 .card:hover{
     transform:none;
 }
+/*logo*/
+.login-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
