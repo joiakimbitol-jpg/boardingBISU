@@ -1,0 +1,67 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}Home | BoardingFinder{% endblock %}
+
+{% block content %}
+
+{% include 'home/hero.html' %}
+
+{% include 'home/search.html' %}
+
+{% include 'home/featured.html' %}
+
+{% include 'home/locations.html' %}
+
+{% include 'home/why_choose.html' %}
+
+{% include 'home/how_it_works.html' %}
+
+{% include 'home/testimonials.html' %}
+
+{% include 'home/cta.html' %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">
+                    Find Your Perfect Boarding House Near BISU Bilar
+                </h1>
+
+                <p class="lead mt-3">
+                    Discover safe, affordable, and comfortable boarding houses
+                    for students with just a few clicks.
+                </p>
+
+                <form class="mt-4">
+                    <div class="input-group input-group-lg">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search boarding houses..."
+                        >
+
+                        <button
+                                type="submit"
+                     class="btn btn-primary">
+              Search
+                    </button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img
+                    src="{% static 'images/hero.png' %}"
+                    class="img-fluid"
+                    alt="Boarding House">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

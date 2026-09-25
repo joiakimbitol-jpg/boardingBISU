@@ -1,8 +1,25 @@
+/* ==========================================================
+   GLOBAL / SHARED STYLES
+   Used across the whole site: layouts/base.html, includes/navbar.html,
+   includes/footer.html, and other shared templates.
+   ========================================================== */
 body{
     background:#f8fafc;
     font-family:Arial, Helvetica, sans-serif;
 }
 
+footer{
+    margin-top:100px;
+}
+
+img{
+    border-radius:15px;
+}
+
+/* ==========================================================
+   NAVIGATION BAR
+   Used in: Frontend/templates/includes/navbar.html
+   ========================================================== */
 .navbar-brand{
     font-size:1.6rem;
 }
@@ -11,9 +28,11 @@ body{
     font-weight:500;
 }
 
-footer{
-    margin-top:100px;
-}
+/* ==========================================================
+   HOME PAGE HERO SECTION
+   Used in: Frontend/templates/home/hero.html and sections that display
+   the landing-page banner on the homepage.
+   ========================================================== */
 .hero{
     background:#f8fafc;
 }
@@ -27,14 +46,6 @@ footer{
     color:#6b7280;
 }
 
-.btn-primary{
-    background:#2563eb;
-    border:none;
-}
-
-.btn-primary:hover{
-    background:#1d4ed8;
-}
 .hero-section{
     padding:100px 0;
     background:#f8fafc;
@@ -49,15 +60,51 @@ footer{
     object-fit:cover;
 }
 
+/* ==========================================================
+   SEARCH FILTER BAR
+   Used in: Frontend/templates/home/search.html
+   This styles the search form that appears on the landing page.
+   ========================================================== */
 .search-section{
     margin-top:-40px;
     position:relative;
     z-index:10;
 }
 
+/* ==========================================================
+   BUTTONS / CTA STYLES
+   Shared by homepage calls-to-action, login/register pages, and general
+   form buttons. Used in templates such as home/cta.html, accounts/login.html,
+   accounts/register.html, and booking-related forms.
+   ========================================================== */
+.btn{
+    border-radius:10px;
+}
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-primary{
+    height:50px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+/* ==========================================================
+   BOADING LIST / CARD COMPONENTS
+   Used in: Frontend/templates/boarding/list.html and reusable card partials
+   such as Frontend/templates/boarding/card.html
+   ========================================================== */
 section{
     padding:80px 0;
 }
+
 .card{
     transition:0.3s ease;
     border-radius:15px;
@@ -68,13 +115,6 @@ section{
     box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
-.btn{
-    border-radius:10px;
-}
-
-section{
-    padding:80px 0;
-}
 .card{
     border-radius:18px;
     overflow:hidden;
@@ -91,39 +131,8 @@ section{
     object-fit:cover;
 }
 
-.badge{
-    font-size:.8rem;
-}
-
-.page-link{
-    border-radius:10px;
-    margin:0 4px;
-}
 .card{
     border-radius:18px;
-}
-
-img{
-    border-radius:15px;
-}
-
-.btn{
-    border-radius:12px;
-}
-
-section{
-    padding:80px 0;
-}
-/*regester form*/
-.form-control{
-    height:50px;
-    border-radius:12px;
-}
-
-.btn-primary{
-    height:50px;
-    border-radius:12px;
-    font-weight:600;
 }
 
 .card{
@@ -133,7 +142,32 @@ section{
 .card:hover{
     transform:none;
 }
-/*logo*/
+
+.badge{
+    font-size:.8rem;
+}
+
+.page-link{
+    border-radius:10px;
+    margin:0 4px;
+}
+
+/* ==========================================================
+   FORM INPUTS
+   Used in authentication and booking forms, including:
+   Frontend/templates/accounts/login.html,
+   Frontend/templates/accounts/register.html,
+   Frontend/templates/boarding/booking_form.html
+   ========================================================== */
+.form-control{
+    height:50px;
+    border-radius:12px;
+}
+
+/* ==========================================================
+   AUTHENTICATION LOGO
+   Used in: Frontend/templates/accounts/login.html
+   ========================================================== */
 .login-logo {
     width: 90px;
     height: 90px;

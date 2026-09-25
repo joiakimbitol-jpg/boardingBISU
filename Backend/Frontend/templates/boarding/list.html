@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+Boarding Houses
+{% endblock %}
+
+{% block content %}
+
+{% include 'boarding/filters.html' %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            {% include 'boarding/card.html' %}
+            {% include 'boarding/card.html' %}
+            {% include 'boarding/card.html' %}
+            {% include 'boarding/card.html' %}
+            {% include 'boarding/card.html' %}
+            {% include 'boarding/card.html' %}
+
+        </div>
+
+        {% include 'boarding/pagination.html' %}
+
+    </div>
+
+</section>
+
+{% endblock %}

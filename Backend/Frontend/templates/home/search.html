@@ -1,0 +1,115 @@
+<section class="search-section py-5 bg-light">
+
+    <div class="container">
+
+        <div class="card shadow border-0">
+
+            <div class="card-body p-4">
+
+                <form action="" method="GET">
+
+                    <div class="row g-3 align-items-center">
+
+                        <!-- Location -->
+                        <div class="col-md-4">
+
+                            <label for="location" class="visually-hidden">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                class="form-control"
+                                placeholder="Location"
+                                aria-label="Search by location">
+
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="col-md-3">
+
+                            <label for="price-range" class="visually-hidden">
+                                Price Range
+                            </label>
+
+                            <select
+                                id="price-range"
+                                name="price"
+                                class="form-select"
+                                aria-label="Select price range">
+
+                                <option value="" selected>
+                                    Price Range
+                                </option>
+
+                                <option value="below-1500">
+                                    Below ₱1,500
+                                </option>
+
+                                <option value="1500-2500">
+                                    ₱1,500 - ₱2,500
+                                </option>
+
+                                <option value="above-2500">
+                                    Above ₱2,500
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Room Type -->
+                        <div class="col-md-3">
+
+                            <label for="room-type" class="visually-hidden">
+                                Room Type
+                            </label>
+
+                            <select
+                                id="room-type"
+                                name="room_type"
+                                class="form-select"
+                                aria-label="Select room type">
+
+                                <option value="" selected>
+                                    Room Type
+                                </option>
+
+                                <option value="solo">
+                                    Solo
+                                </option>
+
+                                <option value="shared">
+                                    Shared
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="col-md-2 d-grid">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                Search
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

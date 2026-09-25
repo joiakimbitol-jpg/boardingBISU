@@ -1,0 +1,514 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Owner Dashboard{% endblock %}
+
+{% block content %}
+
+<!-- Dashboard Header -->
+
+<section class="py-5 bg-light">
+    <div class="container">
+
+```
+    <div class="row align-items-center">
+
+        <!-- Welcome -->
+        <div class="col-lg-8">
+
+            <p class="text-primary fw-semibold mb-2">
+                OWNER DASHBOARD
+            </p>
+
+            <h1 class="fw-bold mb-2">
+                Welcome back, {{ request.user.full_name }}! 👋
+            </h1>
+
+            <p class="text-muted mb-0">
+                Manage your boarding houses, rooms, bookings, and tenants
+                in one place.
+            </p>
+
+        </div>
+
+        <!-- Profile -->
+        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+            <a href="{% url 'accounts:profile' %}"
+               class="btn btn-outline-primary">
+
+                <i class="bi bi-person-circle me-2"></i>
+                My Profile
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- Dashboard Statistics -->
+
+<section class="py-5">
+
+```
+<div class="container">
+
+    <div class="mb-4">
+
+        <h3 class="fw-bold mb-1">
+            Overview
+        </h3>
+
+        <p class="text-muted">
+            Keep track of your boarding house activity.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <!-- Boarding Houses -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+                            <p class="text-muted mb-1">
+                                Boarding Houses
+                            </p>
+
+                            <h2 class="fw-bold mb-0">
+                                0
+                            </h2>
+                        </div>
+
+                        <div class="bg-primary bg-opacity-10 rounded-3 p-3">
+                            <i class="bi bi-house-door fs-3 text-primary"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Available Rooms -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+                            <p class="text-muted mb-1">
+                                Available Rooms
+                            </p>
+
+                            <h2 class="fw-bold mb-0">
+                                0
+                            </h2>
+                        </div>
+
+                        <div class="bg-success bg-opacity-10 rounded-3 p-3">
+                            <i class="bi bi-door-open fs-3 text-success"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Pending Bookings -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+                            <p class="text-muted mb-1">
+                                Pending Bookings
+                            </p>
+
+                            <h2 class="fw-bold mb-0">
+                                0
+                            </h2>
+                        </div>
+
+                        <div class="bg-warning bg-opacity-10 rounded-3 p-3">
+                            <i class="bi bi-calendar-check fs-3 text-warning"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Tenants -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <div>
+                            <p class="text-muted mb-1">
+                                Current Tenants
+                            </p>
+
+                            <h2 class="fw-bold mb-0">
+                                0
+                            </h2>
+                        </div>
+
+                        <div class="bg-info bg-opacity-10 rounded-3 p-3">
+                            <i class="bi bi-people fs-3 text-info"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- Quick Actions -->
+
+<section class="pb-5">
+
+```
+<div class="container">
+
+    <div class="mb-4">
+
+        <h3 class="fw-bold mb-1">
+            Quick Actions
+        </h3>
+
+        <p class="text-muted">
+            Manage your boarding house business.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <!-- Add Boarding House -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <i class="bi bi-house-add fs-1 text-primary"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        Add Boarding House
+                    </h5>
+
+                    <p class="text-muted small">
+                        Register a new boarding house and provide
+                        information about its location, price, and amenities.
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-primary btn-sm">
+                        <i class="bi bi-plus-lg me-1"></i>
+                        Add Boarding House
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Manage Listings -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <i class="bi bi-building fs-1 text-success"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        My Boarding Houses
+                    </h5>
+
+                    <p class="text-muted small">
+                        View, edit, and manage your existing boarding
+                        house listings.
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-success btn-sm">
+                        <i class="bi bi-eye me-1"></i>
+                        View Listings
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Manage Rooms -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <i class="bi bi-door-open fs-1 text-info"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        Manage Rooms
+                    </h5>
+
+                    <p class="text-muted small">
+                        Add rooms, update room availability, and manage
+                        room information.
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-info btn-sm text-white">
+                        <i class="bi bi-door-open me-1"></i>
+                        Manage Rooms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bookings -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <i class="bi bi-calendar-check fs-1 text-warning"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        Booking Requests
+                    </h5>
+
+                    <p class="text-muted small">
+                        Review incoming booking requests from students
+                        and manage their status.
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-warning btn-sm">
+                        <i class="bi bi-calendar-check me-1"></i>
+                        View Requests
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Tenants -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <i class="bi bi-people fs-1 text-danger"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        My Tenants
+                    </h5>
+
+                    <p class="text-muted small">
+                        View and manage students currently staying in
+                        your boarding houses.
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-danger btn-sm">
+                        <i class="bi bi-people me-1"></i>
+                        View Tenants
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Profile -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <i class="bi bi-person-gear fs-1 text-secondary"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        Account Settings
+                    </h5>
+
+                    <p class="text-muted small">
+                        Update your personal information, contact details,
+                        and account settings.
+                    </p>
+
+                    <a href="{% url 'accounts:profile' %}"
+                       class="btn btn-secondary btn-sm">
+                        <i class="bi bi-gear me-1"></i>
+                        Manage Account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- Account Information -->
+
+<section class="pb-5">
+
+```
+<div class="container">
+
+    <div class="card border-0 shadow-sm">
+
+        <div class="card-body p-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h4 class="fw-bold mb-2">
+                        <i class="bi bi-person-circle text-primary me-2"></i>
+                        Owner Account
+                    </h4>
+
+                    <p class="text-muted mb-3">
+                        You are currently signed in as a
+                        <strong>Boarding House Owner</strong>.
+                    </p>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3 mb-md-0">
+
+                            <small class="text-muted d-block">
+                                Full Name
+                            </small>
+
+                            <span class="fw-semibold">
+                                {{ request.user.full_name }}
+                            </span>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <small class="text-muted d-block">
+                                Email Address
+                            </small>
+
+                            <span class="fw-semibold">
+                                {{ request.user.email }}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                    <a href="{% url 'accounts:edit_profile' %}"
+                       class="btn btn-outline-primary">
+
+                        <i class="bi bi-pencil me-2"></i>
+                        Edit Profile
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+{% endblock %}
