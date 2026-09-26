@@ -115,48 +115,6 @@
 
                         </div>
 
-                        <!-- Account Type -->
-                        <div class="mb-3">
-
-                            <label for="role" class="form-label">
-                                Account Type
-                            </label>
-
-                            <select
-                                id="role"
-                                name="role"
-                                class="form-select"
-                                required>
-
-                                <option value="" disabled
-                                    {% if not form.role.value %}selected{% endif %}>
-                                    Select account type
-                                </option>
-
-                                <option value="student"
-                                    {% if form.role.value == "student" %}selected{% endif %}>
-                                    Student
-                                </option>
-
-                                <option value="owner"
-                                    {% if form.role.value == "owner" %}selected{% endif %}>
-                                    Boarding House Owner
-                                </option>
-
-                                <option value="admin"
-                                {% if form.role.value == "admin" %}selected{% endif %}>
-                                    Administrator
-                                  </option>
-
-                            </select>
-
-                            {% if form.role.errors %}
-                                <div class="text-danger small mt-1">
-                                    {{ form.role.errors }}
-                                </div>
-                            {% endif %}
-
-                        </div>
 
                         <!-- Password -->
                         <div class="mb-3">

@@ -13,7 +13,6 @@ class RegisterForm(UserCreationForm):
             "full_name",
             "email",
             "phone_number",
-            "role",
             "password1",
             "password2",
         )
@@ -23,16 +22,15 @@ class RegisterForm(UserCreationForm):
                 "class": "form-control",
                 "placeholder": "Full Name",
             }),
+
             "email": forms.EmailInput(attrs={
                 "class": "form-control",
                 "placeholder": "Email Address",
             }),
+
             "phone_number": forms.TextInput(attrs={
                 "class": "form-control",
                 "placeholder": "Phone Number",
-            }),
-            "role": forms.Select(attrs={
-                "class": "form-select",
             }),
         }
 
@@ -49,3 +47,14 @@ class RegisterForm(UserCreationForm):
             "placeholder": "Confirm Password",
         })
     )
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+
+        # Public registration is always Student
+        user.role = User.STUDENT
+
+        if commit:
+            user.save()
+
+        return user
