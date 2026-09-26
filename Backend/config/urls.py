@@ -24,8 +24,16 @@ urlpatterns = [
 
     path('', views.home, name='home'),
 
+    path("about/", views.about, name="about"),
+    path("contact/", views.contact, name="contact"),
+
     path("accounts/", include("apps.accounts.urls")),
 
      path("dashboard/", include("apps.dashboard.urls")),
+
+      path(
+        "boarding-houses/",
+        include("apps.boarding.urls")
+    ),
 
 ]

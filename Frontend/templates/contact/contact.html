@@ -1,0 +1,154 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <p class="text-primary fw-semibold mb-2">
+                CONTACT US
+            </p>
+
+            <h1 class="fw-bold">
+                Get in Touch with Us
+            </h1>
+
+            <p class="text-muted">
+                Have questions about BoardingFinder?
+                We are here to help.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Contact Information -->
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm rounded-4 h-100">
+                    <div class="card-body p-4 p-lg-5">
+
+                        <h3 class="fw-bold mb-4">
+                            Contact Information
+                        </h3>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Email</h6>
+                            <p class="text-muted mb-0">
+                                support@boardingfinder.com
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Phone</h6>
+                            <p class="text-muted mb-0">
+                                +63 900 000 0000
+                            </p>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold">Address</h6>
+                            <p class="text-muted mb-0">
+                                Bohol Island State University
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+
+                        <h3 class="fw-bold mb-4">
+                            Send Us a Message
+                        </h3>
+
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="form-control"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">
+                                    Subject
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    class="form-control"
+                                    placeholder="Enter your subject"
+                                    required
+                                >
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg"
+                                >
+                                    Send Message
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
