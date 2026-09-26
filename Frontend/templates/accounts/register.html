@@ -143,6 +143,11 @@
                                     Boarding House Owner
                                 </option>
 
+                                <option value="admin"
+                                {% if form.role.value == "admin" %}selected{% endif %}>
+                                    Administrator
+                                  </option>
+
                             </select>
 
                             {% if form.role.errors %}
